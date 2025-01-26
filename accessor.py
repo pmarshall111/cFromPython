@@ -19,6 +19,6 @@ cApi.peterComplexGlobalFunc.restype = ReturnObj
 
 # 3. Call C api with ctypes vars
 a = c_int(int(args.number))
-print(f"Before: {a}")
-print(cApi.peterComplexGlobalFunc(byref(a)))
-print(f"After: {a}")
+print(f"The arg: {a}")
+cApi.peterComplexGlobalFunc(byref(a))
+print(f"The arg after the call: {a}")
